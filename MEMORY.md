@@ -27,6 +27,10 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
+- Fixed broken links in prayer guides and recommended apps pages (March 18, 2025):
+  - Corrected navigation menu links with proper relative paths
+  - Fixed logo links to ensure they point to the main site index
+  - Removed references to non-existent pages like 'inddadex.html'
 - Prepared site for launch on GitHub Pages:
   - Created proper CNAME file with thefathertrucker.ca domain
   - Updated sitemap.xml with absolute URLs

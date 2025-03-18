@@ -43,6 +43,10 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] Fixed broken links in prayer guides and recommended apps pages (March 18, 2025):
+  - Added proper logo links on all pages
+  - Added fix-broken-links.js script to handle URL issues
+  - Fixed navigation menu paths with correct relative paths
 
 - [x] Created proper CNAME file for GitHub Pages (March 18, 2025)
 - [x] Updated sitemap.xml with absolute URLs (March 18, 2025)
