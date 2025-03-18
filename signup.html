@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Father Trucker - Power Serve Ministries</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-message {
+            color: #d9231d;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .error-input {
+            border-color: #d9231d !important;
+        }
+        
+        #form-success {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Fix for checkbox alignment */
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Fix for button text visibility */
+        .form-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            color: white !important;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            background-color: #c25618;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Father Trucker</h1>
+                <p>Power Serve Ministries</p>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="signup.html" class="active btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Join Our Community</h2>
+        </div>
+    </section>
+
+    <section class="signup-content">
+        <div class="container">
+            <div class="about-section" style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+                <h3>Stay Connected on the Road</h3>
+                <p>Sign up to receive updates, resources, and encouragement specifically designed for truckers. We send content that's valuable, relevant, and easy to consume during your breaks or downtime.</p>
+            </div>
+
+            <div class="signup-form">
+                <!-- MailChimp Signup Form -->
+                <form id="mc-embedded-signup-form" action="https://yourdomain.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXXXXXXXXXXXXX&amp;id=XXXXXXXXXX" method="post" id="signup-form" name="mc-embedded-signup-form" class="validate" target="_blank">
+                    <div class="form-group">
+                        <label for="mce-EMAIL">Email Address <span class="required">*</span></label>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mce-FNAME">First Name</label>
+                        <input type="text" name="FNAME" id="mce-FNAME">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mce-LNAME">Last Name</label>
+                        <input type="text" name="LNAME" id="mce-LNAME">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mce-ROLE">I am a: </label>
+                        <select name="ROLE" id="mce-ROLE">
+                            <option value="">-- Please Select --</option>
+                            <option value="Long-haul Trucker">Long-haul Trucker</option>
+                            <option value="Local Driver">Local Driver</option>
+                            <option value="Truck Owner/Operator">Truck Owner/Operator</option>
+                            <option value="Dispatcher">Dispatcher</option>
+                            <option value="Trucking Company Owner">Trucking Company Owner</option>
+                            <option value="Family of Trucker">Family of Trucker</option>
+                            <option value="Ministry Partner">Ministry Partner</option>
+                            <option value="Interested Supporter">Interested Supporter</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>What content are you most interested in? (Check all that apply)</label>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="group[1234][1]" value="1" id="mce-group[1234]-1234-0">
+                                <label style="font-weight: normal;" for="mce-group[1234]-1234-0">Daily Devotionals</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="group[1234][2]" value="2" id="mce-group[1234]-1234-1">
+                                <label style="font-weight: normal;" for="mce-group[1234]-1234-1">Bible Study Resources</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="group[1234][4]" value="4" id="mce-group[1234]-1234-2">
+                                <label style="font-weight: normal;" for="mce-group[1234]-1234-2">Prayer Support</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="group[1234][8]" value="8" id="mce-group[1234]-1234-3">
+                                <label style="font-weight: normal;" for="mce-group[1234]-1234-3">Christian Trucker Community</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="group[1234][16]" value="16" id="mce-group[1234]-1234-4">
+                                <label style="font-weight: normal;" for="mce-group[1234]-1234-4">Family Support Resources</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mce-MMERGE6">How can we pray for you? (Optional)</label>
+                        <textarea name="MMERGE6" id="mce-MMERGE6"></textarea>
+                    </div>
+                    
+                    <!-- Required MailChimp hidden fields -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_XXXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXXX" tabindex="-1" value="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="form-submit">Subscribe</button>
+                    </div>
+                    
+                    <div id="form-success">
+                        Thank you for signing up! Please check your email to confirm your subscription.
+                    </div>
+                </form>
+                <!-- End MailChimp Signup Form -->
+            </div>
+            
+            <div class="about-section" style="text-align: center; max-width: 800px; margin: 40px auto 0;">
+                <h3>What to Expect</h3>
+                <p>When you sign up, you'll receive:</p>
+                <ul style="list-style-type: none; margin: 20px 0; padding: 0; text-align: left;">
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i>
+                        Weekly devotional content designed for truckers
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i>
+                        Updates on new resources and tools
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i>
+                        Information about virtual small groups and events
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i>
+                        Prayer support and encouragement
+                    </li>
+                </ul>
+                <p>We respect your privacy and will never share your information with third parties. You can unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Father Trucker</h3>
+                    <p>Power Serve Ministries</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Power Serve Ministries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
