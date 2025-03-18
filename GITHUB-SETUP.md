@@ -10,7 +10,7 @@ This guide provides step-by-step instructions for setting up the Father Trucker 
 2. **Create a New Repository**
    - Click the "+" icon in the top right corner
    - Select "New repository"
-   - Enter the repository name: `fathertrucker.ca`
+   - Enter the repository name: `thefathertrucker.ca`
    - Add a description: "Father Trucker - Power Serve Ministries Website"
    - Choose "Public" repository
    - Check "Add a README file" if not already created
@@ -21,7 +21,7 @@ This guide provides step-by-step instructions for setting up the Father Trucker 
 ### Using GitHub Web Interface (Simplest Method)
 
 1. **Navigate to Your Repository**
-   - Go to `https://github.com/yourusername/fathertrucker.ca`
+   - Go to `https://github.com/yourusername/thefathertrucker.ca`
 
 2. **Upload Files**
    - Click "Add file" > "Upload files"
@@ -43,7 +43,7 @@ If you're comfortable with Git:
 
 2. **Connect to GitHub Repository**
    ```
-   git remote add origin https://github.com/yourusername/fathertrucker.ca.git
+   git remote add origin https://github.com/yourusername/thefathertrucker.ca.git
    git branch -M main
    git push -u origin main
    ```
@@ -59,7 +59,7 @@ If you're comfortable with Git:
 
 2. **Configure Custom Domain**
    - In the same "Pages" section, find "Custom domain"
-   - Enter your domain: `fathertrucker.ca`
+   - Enter your domain: `thefathertrucker.ca`
    - Click "Save"
    - Note: GitHub will create a commit that adds a CNAME file to your repository (if it doesn't already exist)
 
@@ -74,7 +74,7 @@ If you're comfortable with Git:
 
 2. **Access DNS Settings**
    - Click "My Products"
-   - Find your domain (fathertrucker.ca)
+   - Find your domain (thefathertrucker.ca)
    - Click "DNS" or "Manage DNS"
 
 3. **Add GitHub Pages IP Addresses**
@@ -129,7 +129,7 @@ If you're comfortable with Git:
 
 ### Custom Domain Not Working
 
-- Verify the CNAME file in your repository contains only `fathertrucker.ca`
+- Verify the CNAME file in your repository contains only `thefathertrucker.ca`
 - Check GoDaddy DNS settings for any errors
 - Ensure the A records point to all four GitHub Pages IP addresses
 

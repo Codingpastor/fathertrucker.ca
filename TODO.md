@@ -44,6 +44,9 @@
 
 ## Completed Tasks
 
+- [x] Created proper CNAME file for GitHub Pages (March 18, 2025)
+- [x] Updated sitemap.xml with absolute URLs (March 18, 2025)
+- [x] Created pre-launch checklist document (March 18, 2025)
 - [x] Made logo clickable to navigate to home page (March 18, 2025)
 - [x] Added three new resource cards (Ellel Ministries, More Than Enough, Gospel First) to resources page (March 18, 2025)
 - [x] Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)

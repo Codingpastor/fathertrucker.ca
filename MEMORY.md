@@ -2,7 +2,7 @@
 
 ## Project Overview
 - **Project Name**: Father Trucker / Power Serve Ministries Website
-- **Domain**: fathertrucker.ca (registered on GoDaddy)
+- **Domain**: thefathertrucker.ca (registered on GoDaddy)
 - **Hosting**: GitHub Pages (free hosting)
 - **Purpose**: Create a simple website for a Christian ministry focused on reaching truckers
 
@@ -27,6 +27,10 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
+- Prepared site for launch on GitHub Pages:
+  - Created proper CNAME file with thefathertrucker.ca domain
+  - Updated sitemap.xml with absolute URLs
+  - Created pre-launch checklist document
 - Made logo clickable to navigate to home page across all site pages
 - Added three new resource cards to resources.html page:
   - Ellel Ministries Canada - healing ministry and discipleship training

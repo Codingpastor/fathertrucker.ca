@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fathertrucker.ca/sitemap.xml
+Sitemap: https://thefathertrucker.ca/sitemap.xml

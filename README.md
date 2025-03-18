@@ -28,7 +28,7 @@ This repository contains the website for Father Trucker (Power Serve Ministries)
 
 ### GitHub Pages Deployment
 
-1. Create a GitHub repository named `fathertrucker.ca`
+1. Create a GitHub repository named `thefathertrucker.ca`
 2. Push all files from this directory to the repository:
    ```
    git init
@@ -43,7 +43,7 @@ This repository contains the website for Father Trucker (Power Serve Ministries)
 
 ### Custom Domain Setup with GoDaddy
 
-1. In the GitHub Pages settings, enter `fathertrucker.ca` in the "Custom domain" field
+1. In the GitHub Pages settings, enter `thefathertrucker.ca` in the "Custom domain" field
 2. Save the settings
 3. In GoDaddy (where the domain is registered):
    - Log in to your GoDaddy account
@@ -61,7 +61,7 @@ This repository contains the website for Father Trucker (Power Serve Ministries)
 
 ### Important Files
 
-- **CNAME** - Contains the custom domain name (fathertrucker.ca)
+- **CNAME** - Contains the custom domain name (thefathertrucker.ca)
 - **.gitignore** - Specifies files Git should ignore
 
 ## MailChimp Integration
