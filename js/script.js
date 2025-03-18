@@ -4,10 +4,30 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('resources')) {
         const links = document.querySelectorAll('a[href^="resources/"]');
         links.forEach(link => {
+            // Make sure we're not already on the full domain URL
+            if (link.href.indexOf('fathertrucker.ca') !== -1) {
+                // Extract the path portion from the full URL
+                const urlParts = link.href.split('fathertrucker.ca/');
+                if (urlParts.length > 1) {
+                    link.href = urlParts[1]; // Use just the relative path
+                }
+            }
+            // Now add the timestamp
             const timestamp = new Date().getTime();
             link.href = link.href + (link.href.includes('?') ? '&' : '?') + '_t=' + timestamp;
         });
     }
+
+    // Check all links for absolute URLs to fathertrucker.ca and convert to relative
+    document.querySelectorAll('a').forEach(link => {
+        if (link.href.indexOf('fathertrucker.ca') !== -1) {
+            // Extract the path portion from the full URL
+            const urlParts = link.href.split('fathertrucker.ca/');
+            if (urlParts.length > 1) {
+                link.href = urlParts[1]; // Use just the relative path
+            }
+        }
+    });
 
     // Mobile navigation toggle
     const menuToggle = document.querySelector('.menu-toggle');

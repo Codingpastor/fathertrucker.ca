@@ -10,6 +10,8 @@ The website has been modified to work with GitHub Pages' default URL pattern (`u
 2. Removing all absolute URLs that referenced fathertrucker.ca
 3. Updating all meta tags to use relative paths
 4. Modifying the sitemap.xml to use relative paths
+5. Adding a special JavaScript fix (`js/fix-domain-links.js`) that prevents redirection to the domain
+6. Disabling the domain-specific redirects in .htaccess
 
 ## How to Test on GitHub Pages
 
@@ -32,9 +34,11 @@ When you're ready to connect the domain and go live:
    - Replace with: `<meta property="og:url" content="https://fathertrucker.ca/page-name.html">` (adjust for each page)
 3. Update the sitemap.xml:
    - Change all `<loc>page.html</loc>` to `<loc>https://fathertrucker.ca/page.html</loc>`
-4. Configure DNS settings in GoDaddy as described in GITHUB-SETUP.md
-5. In GitHub repository settings, set the custom domain to fathertrucker.ca
-6. Enable HTTPS once the domain is verified
+4. Remove or comment out the fix-domain-links.js script tag from all HTML files
+5. Uncomment the www to non-www redirect in .htaccess
+6. Configure DNS settings in GoDaddy as described in GITHUB-SETUP.md
+7. In GitHub repository settings, set the custom domain to fathertrucker.ca
+8. Enable HTTPS once the domain is verified
 
 ## Files Modified
 
@@ -44,8 +48,15 @@ The following files were modified to remove absolute URLs:
 - about.html
 - resources.html
 - signup.html
+- privacy-policy.html
 - resources/recommended-apps/index.html
 - sitemap.xml
+- .htaccess
+
+New files created:
+
+- js/fix-domain-links.js (special script to prevent domain redirection)
+- CNAME.bak (renamed from CNAME)
 
 ## Domain Configuration
 
