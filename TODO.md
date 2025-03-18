@@ -44,6 +44,7 @@
 
 ## Completed Tasks
 
+- [x] Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)
 - [x] Removed audio resources card from resources.html page (March 18, 2025)
 - [x] Created Recommended Apps page with 5 discipleship apps (March 18, 2025)
 - [x] Fixed mobile menu layout and centering issues (March 18, 2025)
