@@ -43,9 +43,20 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] Removed problematic JavaScript URL fixing scripts (March 18, 2025):
+  - Removed `github-pages-fix.js` and `path-fixer.js` from prayer guides and recommended apps pages
+  - These scripts were causing navigation issues rather than fixing them
+  - Let the correct relative paths in the HTML function properly without interference
+  - Updated LINK-FIXES.md and MEMORY.md to document the solution
+
+- [x] Previously created unified URL fixing solution (March 18, 2025):
+  - Created new path-fixer.js script to replace older scripts
+  - Fixed issues with links pointing to non-existent inddadex.html
+  - Ensured relative paths work correctly in all subdirectories
+  - Created LINK-FIXES.md to document the solution
+
 - [x] Fixed broken links in prayer guides and recommended apps pages (March 18, 2025):
   - Added proper logo links on all pages
-  - Added fix-broken-links.js script to handle URL issues
   - Fixed navigation menu paths with correct relative paths
 
 - [x] Created proper CNAME file for GitHub Pages (March 18, 2025)

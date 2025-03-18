@@ -27,7 +27,17 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
-- Fixed broken links in prayer guides and recommended apps pages (March 18, 2025):
+- Removed problematic JavaScript URL fixing scripts (March 18, 2025):
+  - Removed `github-pages-fix.js` and `path-fixer.js` from prayer guides and recommended apps pages
+  - These scripts were causing issues with links rather than fixing them
+  - The relative paths in the HTML were already correct and working properly without these scripts
+
+- Previously fixed broken links and URL issues throughout the site (March 18, 2025):
+  - Created new unified `path-fixer.js` script to handle all URL issues
+  - Replaced ineffective `fix-broken-links.js` and `fix-domain-links.js` scripts
+  - Fixed issues with links that were pointing to non-existent pages like `inddadex.html`
+  - Ensured relative paths work correctly for both GitHub Pages and the main domain
+- Previously fixed broken links in prayer guides and recommended apps pages (March 18, 2025):
   - Corrected navigation menu links with proper relative paths
   - Fixed logo links to ensure they point to the main site index
   - Removed references to non-existent pages like 'inddadex.html'
