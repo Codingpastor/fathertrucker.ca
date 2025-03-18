@@ -44,6 +44,7 @@
 
 ## Completed Tasks
 
+- [x] Added three new resource cards (Ellel Ministries, More Than Enough, Gospel First) to resources page (March 18, 2025)
 - [x] Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)
 - [x] Fixed styling issues with donation button on GitHub Pages (March 18, 2025)
 - [x] Removed audio resources card from resources.html page (March 18, 2025)

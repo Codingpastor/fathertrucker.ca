@@ -27,8 +27,11 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
+- Added three new resource cards to resources.html page:
+  - Ellel Ministries Canada - healing ministry and discipleship training
+  - More Than Enough - financial fitness resources based on biblical principles
+  - Gospel First Ministries - free resources for understanding and sharing the Gospel
 - Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)
-- Added styles for donation button and donation box in CSS
 - Fixed GitHub Pages styling issues for donation button:
   - Added version parameter to CSS links to prevent caching
   - Created dedicated donate-styles.css file with !important flags
