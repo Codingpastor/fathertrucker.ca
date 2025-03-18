@@ -29,7 +29,11 @@
 ## Completed Tasks
 - Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)
 - Added styles for donation button and donation box in CSS
-- Updated TODO.md to reflect this change
+- Fixed GitHub Pages styling issues for donation button:
+  - Added version parameter to CSS links to prevent caching
+  - Created dedicated donate-styles.css file with !important flags
+  - Added inline styles as a fallback
+- Updated TODO.md to reflect these changes
 
 ## Future Tasks
 - Refer to TODO.md for a complete list of planned tasks and priorities
