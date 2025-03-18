@@ -41,3 +41,10 @@
 - [ ] Monitor website analytics
 - [ ] Check for broken links
 - [ ] Review and update content as ministry evolves
+
+## Completed Tasks
+
+- [x] Removed audio resources card from resources.html page (March 18, 2025)
+- [x] Created Recommended Apps page with 5 discipleship apps (March 18, 2025)
+- [x] Fixed mobile menu layout and centering issues (March 18, 2025)
+- [x] Removed absolute URLs to enable GitHub Pages testing before domain setup (March 18, 2025)
