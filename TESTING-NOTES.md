@@ -11,7 +11,8 @@ The website has been modified to work with GitHub Pages' default URL pattern (`u
 3. Updating all meta tags to use relative paths
 4. Modifying the sitemap.xml to use relative paths
 5. Adding a special JavaScript fix (`js/fix-domain-links.js`) that prevents redirection to the domain
-6. Disabling the domain-specific redirects in .htaccess
+6. Creating a mobile-specific debug page (`redirect-fix.html`) to help diagnose and fix mobile redirection issues
+7. Disabling the domain-specific redirects in .htaccess
 
 ## How to Test on GitHub Pages
 
@@ -56,6 +57,7 @@ The following files were modified to remove absolute URLs:
 New files created:
 
 - js/fix-domain-links.js (special script to prevent domain redirection)
+- redirect-fix.html (mobile debugging page to help with mobile-specific redirection issues)
 - CNAME.bak (renamed from CNAME)
 
 ## Domain Configuration

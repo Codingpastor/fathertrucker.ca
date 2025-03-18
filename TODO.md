@@ -50,3 +50,4 @@
 - [x] Removed absolute URLs to enable GitHub Pages testing before domain setup (March 18, 2025)
 - [x] Fixed browser caching issues so new pages display correctly (March 18, 2025)
 - [x] Added JavaScript to prevent domain redirections during GitHub Pages testing (March 18, 2025)
+- [x] Fixed mobile-specific domain redirection issues (March 18, 2025)

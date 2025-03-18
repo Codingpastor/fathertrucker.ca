@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Fixer - Father Trucker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #3a5a78;
+        }
+        .button {
+            display: inline-block;
+            background: #d9621e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .log {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            height: 300px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Redirect Fixer</h1>
+    <p>This page helps diagnose and fix issues with redirects to fathertrucker.ca on mobile devices.</p>
+    
+    <h2>Instructions:</h2>
+    <ol>
+        <li>First visit this page (which you're on now)</li>
+        <li>Then click the button below to try accessing the resources page</li>
+        <li>The log will show any redirect attempts that were blocked</li>
+    </ol>
+    
+    <a href="resources.html" class="button" id="resourcesLink">Go to Resources Page</a>
+    
+    <h2>Debug Log:</h2>
+    <div class="log" id="log"></div>
+    
+    <script>
+        // Log function to display messages in the log div
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const timestamp = new Date().toISOString().substr(11, 8);
+            logDiv.innerHTML += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            console.log(message);
+        }
+        
+        log('Page loaded - Initializing redirect fixes');
+        
+        // Detect mobile devices
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        log(`Device detected: ${isMobile ? 'Mobile' : 'Desktop'}`);
+        log(`User Agent: ${navigator.userAgent}`);
+        
+        // Intercept navigation methods
+        if (typeof window.history !== 'undefined' && window.history.pushState) {
+            log('Intercepting history API methods');
+            
+            // Save the original methods
+            const originalPushState = window.history.pushState;
+            const originalReplaceState = window.history.replaceState;
+            
+            // Override pushState
+            window.history.pushState = function() {
+                if (arguments.length > 2 && typeof arguments[2] === 'string') {
+                    log(`pushState called with URL: ${arguments[2]}`);
+                    
+                    if (arguments[2].indexOf('fathertrucker.ca') !== -1) {
+                        log(`⚠️ Prevented pushState redirect to: ${arguments[2]}`);
+                        const urlParts = arguments[2].split('fathertrucker.ca/');
+                        if (urlParts.length > 1) {
+                            arguments[2] = urlParts[1];
+                            log(`✓ Corrected to: ${arguments[2]}`);
+                        }
+                    }
+                }
+                return originalPushState.apply(this, arguments);
+            };
+            
+            // Override replaceState
+            window.history.replaceState = function() {
+                if (arguments.length > 2 && typeof arguments[2] === 'string') {
+                    log(`replaceState called with URL: ${arguments[2]}`);
+                    
+                    if (arguments[2].indexOf('fathertrucker.ca') !== -1) {
+                        log(`⚠️ Prevented replaceState redirect to: ${arguments[2]}`);
+                        const urlParts = arguments[2].split('fathertrucker.ca/');
+                        if (urlParts.length > 1) {
+                            arguments[2] = urlParts[1];
+                            log(`✓ Corrected to: ${arguments[2]}`);
+                        }
+                    }
+                }
+                return originalReplaceState.apply(this, arguments);
+            };
+        } else {
+            log('⚠️ History API not available, can\'t intercept');
+        }
+        
+        // Prevent direct window.location changes
+        try {
+            log('Setting up window.location intercept');
+            
+            // Save the original location
+            const originalLocation = window.location;
+            
+            // Define a getter/setter for location
+            Object.defineProperty(window, 'location', {
+                get: function() {
+                    log('window.location accessed');
+                    return originalLocation;
+                },
+                set: function(value) {
+                    log(`window.location set to: ${value}`);
+                    
+                    if (typeof value === 'string' && value.indexOf('fathertrucker.ca') !== -1) {
+                        log(`⚠️ Prevented direct location redirect to: ${value}`);
+                        const urlParts = value.split('fathertrucker.ca/');
+                        if (urlParts.length > 1) {
+                            value = urlParts[1];
+                            log(`✓ Corrected to: ${value}`);
+                        }
+                    }
+                    originalLocation.href = value;
+                },
+                configurable: true
+            });
+            
+            log('window.location intercept set up successfully');
+        } catch (e) {
+            log(`⚠️ Could not override window.location: ${e}`);
+        }
+        
+        // Modify the resources link
+        document.addEventListener('DOMContentLoaded', function() {
+            const resourcesLink = document.getElementById('resourcesLink');
+            
+            resourcesLink.addEventListener('click', function(e) {
+                log('Resources link clicked');
+                
+                // Check if the link is trying to redirect to fathertrucker.ca
+                const href = resourcesLink.getAttribute('href');
+                if (href.indexOf('fathertrucker.ca') !== -1) {
+                    e.preventDefault();
+                    log(`⚠️ Prevented redirect from link: ${href}`);
+                    
+                    const urlParts = href.split('fathertrucker.ca/');
+                    if (urlParts.length > 1) {
+                        const fixedUrl = urlParts[1];
+                        log(`✓ Navigating to corrected URL: ${fixedUrl}`);
+                        window.location.href = fixedUrl;
+                    }
+                } else {
+                    log(`Link is clean, navigating to: ${href}`);
+                }
+            });
+            
+            // Add touch event for mobile
+            resourcesLink.addEventListener('touchend', function(e) {
+                log('Resources link touched (mobile)');
+                
+                // Check if the link is trying to redirect to fathertrucker.ca
+                const href = resourcesLink.getAttribute('href');
+                if (href.indexOf('fathertrucker.ca') !== -1) {
+                    e.preventDefault();
+                    log(`⚠️ Prevented redirect from touch event: ${href}`);
+                    
+                    const urlParts = href.split('fathertrucker.ca/');
+                    if (urlParts.length > 1) {
+                        const fixedUrl = urlParts[1];
+                        log(`✓ Navigating to corrected URL: ${fixedUrl}`);
+                        window.location.href = fixedUrl;
+                    }
+                } else {
+                    log(`Touch event is clean, continuing navigation to: ${href}`);
+                }
+            });
+        });
+        
+        log('All redirect prevention measures initialized');
+    </script>
+</body>
+</html>
