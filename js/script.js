@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Force cache refreshing
+    // Add a random query parameter to force reload of resources
+    if (window.location.pathname.includes('resources')) {
+        const links = document.querySelectorAll('a[href^="resources/"]');
+        links.forEach(link => {
+            const timestamp = new Date().getTime();
+            link.href = link.href + (link.href.includes('?') ? '&' : '?') + '_t=' + timestamp;
+        });
+    }
+
     // Mobile navigation toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
