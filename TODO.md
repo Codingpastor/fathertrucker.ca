@@ -44,6 +44,7 @@
 
 ## Completed Tasks
 
+- [x] Made logo clickable to navigate to home page (March 18, 2025)
 - [x] Added three new resource cards (Ellel Ministries, More Than Enough, Gospel First) to resources page (March 18, 2025)
 - [x] Added donation button to about.html page linking to onmb.org/donate/ (March 18, 2025)
 - [x] Fixed styling issues with donation button on GitHub Pages (March 18, 2025)

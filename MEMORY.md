@@ -27,6 +27,7 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
+- Made logo clickable to navigate to home page across all site pages
 - Added three new resource cards to resources.html page:
   - Ellel Ministries Canada - healing ministry and discipleship training
   - More Than Enough - financial fitness resources based on biblical principles
