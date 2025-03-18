@@ -27,7 +27,21 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
-- Removed problematic JavaScript URL fixing scripts (March 18, 2025):
+- **Complete removal of all link-fixing JavaScript (March 18, 2025)**:
+  - Removed all JavaScript files related to URL fixing
+  - Moved the following scripts to js/removed-scripts directory:
+    - github-pages-fix.js
+    - path-fixer.js
+    - fix-broken-links.js
+    - fix-domain-links.js
+    - Backup versions of these scripts
+    - redirect-fix.html diagnostic page
+    - update_logo_links.sh bash script
+  - Cleaned up script.js to remove URL manipulation code
+  - Added js/removed-scripts/ to .gitignore
+  - Let the website function with standard HTML relative paths
+
+- Previously removed problematic JavaScript URL fixing scripts (March 18, 2025):
   - Removed `github-pages-fix.js` and `path-fixer.js` from prayer guides and recommended apps pages
   - These scripts were causing issues with links rather than fixing them
   - The relative paths in the HTML were already correct and working properly without these scripts
