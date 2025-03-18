@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Version check for cache-busting
+    const scriptVersion = '20250318';
+    const storedVersion = localStorage.getItem('siteVersion');
+    
+    // If the version is different or not set, we may need to clear cache
+    if (!storedVersion || storedVersion !== scriptVersion) {
+        console.log('New version detected - updating localStorage version');
+        localStorage.setItem('siteVersion', scriptVersion);
+        
+        // If this isn't the clear-cache page, show a cache notice
+        if (!window.location.href.includes('clear-cache.html')) {
+            // Check if we've shown the notice in this session
+            const hasShownNotice = sessionStorage.getItem('cacheNoticeShown');
+            if (!hasShownNotice && Math.random() < 0.3) { // Show 30% of the time to avoid annoying users
+                sessionStorage.setItem('cacheNoticeShown', 'true');
+                setTimeout(function() {
+                    if (confirm('We recently updated our site. If you\'re experiencing issues, you may need to clear your browser cache. Go to the cache clearing page?')) {
+                        window.location.href = 'clear-cache.html';
+                    }
+                }, 2000);
+            }
+        }
+    }
     // Mobile navigation toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');

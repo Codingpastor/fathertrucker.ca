@@ -27,6 +27,13 @@
   - Privacy Policy (privacy-policy.html)
 
 ## Completed Tasks
+- **Fixed browser caching issues (March 18, 2025)**:
+  - Added cache-busting version parameters to JavaScript includes (script.js?v=20250318)
+  - Removed all references to JavaScript link-fixing scripts from HTML files
+  - Created a clear-cache.html page with instructions for visitors to clear their browser cache
+  - Fixed absolute paths in signup.html (/index.html → index.html)
+  - Removed mobile testing notice that referenced the deleted redirect-fix.html page
+
 - **Complete removal of all link-fixing JavaScript (March 18, 2025)**:
   - Removed all JavaScript files related to URL fixing
   - Moved the following scripts to js/removed-scripts directory:

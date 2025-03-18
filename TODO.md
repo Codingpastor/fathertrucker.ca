@@ -43,6 +43,13 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] **Fixed browser caching issues (March 18, 2025)**:
+  - Added cache-busting version parameters to all JavaScript references (script.js?v=20250318)
+  - Updated all HTML files to remove references to link-fixing scripts
+  - Created a clear-cache.html page with instructions for users to clear their cache
+  - Fixed absolute paths in signup.html to use relative paths
+  - Implemented proper no-cache meta tags on key pages
+
 - [x] **Complete removal of all link-fixing JavaScript (March 18, 2025)**:
   - Removed all JavaScript files related to URL fixing
   - Moved problematic scripts to js/removed-scripts directory

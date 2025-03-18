@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Browser Cache - Father Trucker</title>
+    <link rel="stylesheet" href="css/styles.css?v=20250318">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .cache-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .instructions {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 25px;
+        }
+        
+        .browser-steps {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .browser-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        ol {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .refresh-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .refresh-button:hover {
+            background-color: #c25618;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
+                <img src="images/logo.png" alt="Father Trucker Logo" height="60">
+                <div>
+                    <h1>Father Trucker</h1>
+                    <p>Power Serve Ministries</p>
+                </div>
+                </a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="mailto:powerservechaplain@gmail.com" class="btn-chaplain">Talk to a Chaplain</a></li>
+                    <li><a href="signup.html" class="btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Clear Your Browser Cache</h2>
+        </div>
+    </section>
+
+    <section class="cache-content">
+        <div class="instructions">
+            <h3><i class="fas fa-exclamation-circle" style="color: var(--secondary-color);"></i> Browser Cache Issue Detected</h3>
+            <p>Our website has been updated, but your browser might be showing an older version from its cache. To fix this, you need to clear your browser cache or use the "hard refresh" option.</p>
+            
+            <p>This is a one-time process that will ensure you're seeing the latest version of our website.</p>
+            
+            <h3>Option 1: Hard Refresh (Quickest Method)</h3>
+            <p>Try one of these keyboard shortcuts while on our website:</p>
+            <ul>
+                <li><strong>Windows/Linux:</strong> Press <code>Ctrl + F5</code> or <code>Ctrl + Shift + R</code></li>
+                <li><strong>Mac:</strong> Press <code>Command + Shift + R</code> or <code>Shift + click the Refresh button</code></li>
+            </ul>
+            
+            <h3>Option 2: Clear Browser Cache</h3>
+            <div class="browser-steps">
+                <div class="browser-name"><i class="fab fa-chrome"></i> Google Chrome</div>
+                <ol>
+                    <li>Click the three dots in the upper right corner</li>
+                    <li>Select "More tools" > "Clear browsing data"</li>
+                    <li>Select "Cached images and files"</li>
+                    <li>Click "Clear data"</li>
+                </ol>
+                
+                <div class="browser-name"><i class="fab fa-firefox"></i> Firefox</div>
+                <ol>
+                    <li>Click the menu button (three lines) in the upper right</li>
+                    <li>Select "Settings"</li>
+                    <li>Go to "Privacy & Security"</li>
+                    <li>Scroll to "Cookies and Site Data" and click "Clear Data"</li>
+                    <li>Select "Cached Web Content" and click "Clear"</li>
+                </ol>
+                
+                <div class="browser-name"><i class="fab fa-safari"></i> Safari</div>
+                <ol>
+                    <li>Click "Safari" in the menu bar</li>
+                    <li>Select "Preferences"</li>
+                    <li>Go to the "Advanced" tab</li>
+                    <li>Check "Show Develop menu in menu bar"</li>
+                    <li>Close Preferences and click "Develop" in the menu bar</li>
+                    <li>Select "Empty Caches"</li>
+                </ol>
+                
+                <div class="browser-name"><i class="fab fa-edge"></i> Microsoft Edge</div>
+                <ol>
+                    <li>Click the three dots in the upper right corner</li>
+                    <li>Select "Settings"</li>
+                    <li>Click "Privacy, search, and services"</li>
+                    <li>Under "Clear browsing data", click "Choose what to clear"</li>
+                    <li>Select "Cached images and files"</li>
+                    <li>Click "Clear now"</li>
+                </ol>
+            </div>
+            
+            <h3>Option 3: Use Incognito/Private Browsing</h3>
+            <p>Opening our website in an incognito or private browsing window will load the site without using cached files.</p>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="refresh-button"><i class="fas fa-sync-alt"></i> Refresh and Go to Home Page</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Father Trucker</h3>
+                    <p>Power Serve Ministries</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@The-Father-Trucker" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/thefathertrucker/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@thefathertrucker" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Power Serve Ministries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=20250318"></script>
+    <script>
+        // Generate a unique timestamp to force browser to reload
+        document.addEventListener('DOMContentLoaded', function() {
+            const timestamp = new Date().getTime();
+            const links = document.querySelectorAll('a[href]');
+            
+            links.forEach(link => {
+                // Skip external links
+                if (link.href.includes('http') && !link.href.includes(window.location.hostname)) {
+                    return;
+                }
+                
+                // Skip mail links
+                if (link.href.includes('mailto:')) {
+                    return;
+                }
+                
+                // Add cache-busting parameter
+                link.href = link.href + (link.href.includes('?') ? '&' : '?') + '_t=' + timestamp;
+            });
+        });
+    </script>
+</body>
+</html>
