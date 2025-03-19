@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!window.location.href.includes('clear-cache.html')) {
             // Check if we've shown the notice in this session
             const hasShownNotice = sessionStorage.getItem('cacheNoticeShown');
-            if (!hasShownNotice && Math.random() < 0.3) { // Show 30% of the time to avoid annoying users
+            if (!hasShownNotice && Math.random() < 0.1) { // Show 30% of the time to avoid annoying users
                 sessionStorage.setItem('cacheNoticeShown', 'true');
                 setTimeout(function() {
                     if (confirm('We recently updated our site. If you\'re experiencing issues, you may need to clear your browser cache. Go to the cache clearing page?')) {

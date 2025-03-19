@@ -60,7 +60,7 @@ ul {
 
 .btn-chaplain {
     display: inline-block;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: var(--white-color) !important;
     padding: 10px 20px;
     border-radius: 5px;
@@ -70,12 +70,12 @@ ul {
 }
 
 .btn-chaplain:hover {
-    background: #2a4758;
+    background: #c25618;
 }
 
 /* Header Styles */
 header {
-    background-color: var(--white-color);
+    background-color: var(--primary-color);
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0;
@@ -110,13 +110,13 @@ header .container {
 }
 
 .logo h1 {
-    color: var(--primary-color);
+    color: var(--white-color);
     font-size: 1.8rem;
     margin-bottom: 5px;
 }
 
 .logo p {
-    color: var(--secondary-color);
+    color: var(--white-color);
     font-size: 1rem;
 }
 
@@ -129,7 +129,7 @@ nav .nav-menu li {
 }
 
 nav .nav-menu a {
-    color: var(--dark-color);
+    color: var(--white-color);
     font-weight: 500;
     position: relative;
     padding-bottom: 5px;
@@ -138,6 +138,7 @@ nav .nav-menu a {
 nav .nav-menu a:hover,
 nav .nav-menu a.active {
     color: var(--secondary-color);
+    opacity: 0.9;
 }
 
 nav .nav-menu a.active::after {
@@ -147,7 +148,7 @@ nav .nav-menu a.active::after {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var(--white-color);
 }
 
 /* Remove underline from buttons with active class */
@@ -168,7 +169,7 @@ nav .nav-menu a.btn-chaplain.active::after {
     width: 25px;
     height: 3px;
     margin: 5px 0;
-    background-color: var(--dark-color);
+    background-color: var(--white-color);
     transition: all 0.3s ease;
 }
 
@@ -437,7 +438,7 @@ footer {
     border-top: 1px solid #444;
 }
 
-/* About Page Styles */
+/* Page Headers */
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/truck.jpg') no-repeat center center/cover;
     color: var(--white-color);
@@ -448,6 +449,31 @@ footer {
 .page-header h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+}
+
+/* Custom page headers */
+.resources-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/resources-header.jpg') no-repeat center center/cover;
+    color: var(--white-color);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.resources-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .page-header,
+    .resources-header {
+        padding: 60px 15px;
+    }
+    
+    .page-header h2,
+    .resources-header h2 {
+        font-size: 1.8rem;
+    }
 }
 
 .about-content,
@@ -646,7 +672,7 @@ footer {
         top: 100%;
         right: 0;
         left: 0;
-        background-color: var(--white-color);
+        background-color: var(--primary-color);
         box-shadow: var(--box-shadow);
         z-index: 100;
     }

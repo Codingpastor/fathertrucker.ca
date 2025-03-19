@@ -43,6 +43,18 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] **Added support for custom header image on resources page (March 19, 2025)**:
+  - Created a new CSS class specifically for the resources page header
+  - Modified resources.html to use the new class
+  - Prepared the site to use a custom image called 'resources-header.jpg'
+  - Maintained the original page-header class for other internal pages
+
+- [x] **Updated header styling (March 19, 2025)**:
+  - Changed header background from white to blue (same blue as the original "Father Trucker" text)
+  - Changed all text in the header to white for better contrast
+  - Made both buttons in the header ("Talk to a Chaplain" and "Sign Up") the same orange color
+  - Updated inline styles in all HTML files to ensure the logo text appears white
+  - Modified mobile menu background to match the blue header
 - [x] **Consolidated and cleaned up markdown documentation (March 18, 2025)**:
   - Created a single CONSOLIDATED.md file containing information from:
     - GITHUB-SETUP.md

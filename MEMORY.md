@@ -1,6 +1,20 @@
 # Project Memory Tracking
 
-## Latest Update (March 18, 2025)
+## Latest Update (March 19, 2025)
+- **Added support for custom header image on resources page (March 19, 2025)**:
+  - Created a new CSS class `.resources-header` specifically for the resources page header
+  - Modified resources.html to use the new class
+  - Prepared the site to use a custom image called 'resources-header.jpg' for the resources page
+  - Maintained the original `.page-header` class for other internal pages
+
+- **Updated header styling (March 19, 2025)**:
+  - Changed header background from white to blue (same blue as the original "Father Trucker" text)
+  - Changed all text in the header to white for better contrast
+  - Made both buttons in the header ("Talk to a Chaplain" and "Sign Up") the same orange color
+  - Updated inline styles in all HTML files to ensure the logo text appears white
+  - Modified mobile menu background to match the blue header
+
+## Previous Updates
 - **Cleaned up documentation files (March 18, 2025)**:
   - After consolidating content into CONSOLIDATED.md, replaced the content of individual markdown files with a reference note
   - Updated the following files to point to CONSOLIDATED.md:
