@@ -1,6 +1,12 @@
 # Project Memory Tracking
 
 ## Latest Update (March 19, 2025)
+- **Prepared Mailchimp integration for signup form (March 19, 2025)**:
+  - Updated signup form with proper Mailchimp structure and attributes
+  - Added instructions for connecting to a specific Mailchimp account
+  - Implemented form submission handling with user feedback
+  - Added placeholder protection to prevent submission until properly configured
+
 - **Added cache-busting features (March 19, 2025)**:
   - Enhanced script.js with a cache-busting function that adds timestamps to CSS and JS resource URLs
   - Created recommendations for resolving GitHub Pages caching issues

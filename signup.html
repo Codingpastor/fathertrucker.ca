@@ -111,8 +111,14 @@
             </div>
 
             <div class="signup-form">
+
+
+                
+
+
+
                 <!-- MailChimp Signup Form -->
-                <form id="mc-embedded-signup-form" action="https://yourdomain.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXXXXXXXXXXXXX&amp;id=XXXXXXXXXX" method="post" id="signup-form" name="mc-embedded-signup-form" class="validate" target="_blank">
+                <form id="mc-embedded-signup-form" action="https://thefathertrucker.us8.list-manage.com/subscribe/post?u=65688461918c278d9549cd04c&amp;id=f0d7a48979&amp;f_id=002d9ae0f0" method="post" name="mc-embedded-signup-form" class="validate" target="_blank" novalidate>
                     <div class="form-group">
                         <label for="mce-EMAIL">Email Address <span class="required">*</span></label>
                         <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
@@ -148,6 +154,8 @@
                         <label>What content are you most interested in? (Check all that apply)</label>
                         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
                             <div class="checkbox-container">
+
+                                
                                 <input type="checkbox" name="group[1234][1]" value="1" id="mce-group[1234]-1234-0">
                                 <label style="font-weight: normal;" for="mce-group[1234]-1234-0">Daily Devotionals</label>
                             </div>
@@ -179,10 +187,11 @@
                         <textarea name="MMERGE6" id="mce-MMERGE6"></textarea>
                     </div>
                     
-                    <!-- Required MailChimp hidden fields -->
+                    <!-- Required MailChimp hidden fields - Replace XXXXXXX with your actual values -->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_XXXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXXX" tabindex="-1" value="">
+                        <input type="text" name="b_65688461918c278d9549cd04c_f0d7a48979" tabindex="-1" value="">
                     </div>
+                    <!-- This is the 'honey pot' field to prevent spam bots -->
                     
                     <div class="form-group">
                         <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="form-submit">Join</button>
@@ -255,5 +264,33 @@
 
     <script src="js/script.js?v=20250318"></script>
     <!-- Path fixing script removed -->
+    
+    <!-- Mailchimp form handling script -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('mc-embedded-signup-form');
+            var successMessage = document.getElementById('form-success');
+            
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    // Only for demonstration purposes if Mailchimp is not fully set up yet
+                    if (form.action.includes('XXXXXXXXXXXXXXXXXXXXXXXX')) {
+                        event.preventDefault();
+                        alert('This form is currently in demo mode. Please configure your Mailchimp account details to activate it.');
+                        return false;
+                    }
+                    
+                    // If you want to show the success message on this page instead of redirecting
+                    // Uncomment these lines and add a 'return false' to prevent the form from submitting
+                    /*
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    window.scrollTo(0, successMessage.offsetTop - 100);
+                    return false;
+                    */
+                });
+            }
+        });
+    </script>
 </body>
 </html>

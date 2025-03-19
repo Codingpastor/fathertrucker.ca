@@ -9,7 +9,7 @@
   - A records pointing to GitHub Pages IP addresses
   - CNAME record for www subdomain
 - [ ] Enable HTTPS in GitHub Pages settings once domain is verified
-- [ ] Replace MailChimp placeholder URL with actual MailChimp form action URL
+- [x] Prepare MailChimp integration for signup form
 - [ ] Add proper logo.png and favicon.ico files
 - [ ] Test website on mobile devices
 
