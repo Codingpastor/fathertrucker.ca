@@ -1,3 +1,32 @@
+// Add cache busting for resource URLs
+document.addEventListener('DOMContentLoaded', function() {
+    // Only run this in development or when cache issues are present
+    const shouldBustCache = true;
+    
+    if (shouldBustCache) {
+        const timestamp = new Date().getTime();
+        const resourceLinks = document.querySelectorAll('link[rel="stylesheet"], script[src]');
+        
+        resourceLinks.forEach(link => {
+            // Skip external resources
+            if (link.href && link.href.includes('http') && !link.href.includes(window.location.hostname) ||
+                link.src && link.src.includes('http') && !link.src.includes(window.location.hostname)) {
+                return;
+            }
+            
+            // Get the current href/src
+            const urlAttr = link.href ? 'href' : 'src';
+            const currentUrl = link[urlAttr];
+            
+            // Add or update cache-busting parameter
+            if (currentUrl) {
+                const separator = currentUrl.includes('?') ? '&' : '?';
+                link[urlAttr] = `${currentUrl}${separator}_t=${timestamp}`;
+            }
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Version check for cache-busting
     const scriptVersion = '20250318';

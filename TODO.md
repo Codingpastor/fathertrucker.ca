@@ -43,6 +43,11 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] **Enhanced cache-busting features (March 19, 2025)**:
+  - Added JavaScript code to automatically append timestamps to resource URLs
+  - Provided strategies for addressing GitHub Pages caching issues
+  - Added recommendations for ensuring visitors see the latest content
+
 - [x] **Added support for custom header image on resources page (March 19, 2025)**:
   - Created a new CSS class specifically for the resources page header
   - Modified resources.html to use the new class

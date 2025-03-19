@@ -1,6 +1,11 @@
 # Project Memory Tracking
 
 ## Latest Update (March 19, 2025)
+- **Added cache-busting features (March 19, 2025)**:
+  - Enhanced script.js with a cache-busting function that adds timestamps to CSS and JS resource URLs
+  - Created recommendations for resolving GitHub Pages caching issues
+  - Provided strategies for ensuring all visitors see the most current version of the site
+
 - **Added support for custom header image on resources page (March 19, 2025)**:
   - Created a new CSS class `.resources-header` specifically for the resources page header
   - Modified resources.html to use the new class
