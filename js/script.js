@@ -1,3 +1,5 @@
+// Main site JavaScript - Updated with FOUC fixes
+
 // Add cache busting for resource URLs
 document.addEventListener('DOMContentLoaded', function() {
     // Only run this in development or when cache issues are present
@@ -28,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // FOUC prevention handled by anti-fouc.js
+    
     // Version check for cache-busting
     const scriptVersion = '20250318';
     const storedVersion = localStorage.getItem('siteVersion');
@@ -51,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    
+    // FOUC prevention handled by anti-fouc.js now
+    
     // Mobile navigation toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');

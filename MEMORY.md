@@ -1,6 +1,17 @@
 # Project Memory Tracking
 
 ## Latest Update (March 19, 2025)
+- **Improved Flash of Unstyled Content (FOUC) fix (March 19, 2025)**:
+  - Implemented a more comprehensive solution to completely eliminate FOUC
+  - Created dedicated anti-fouc.css and anti-fouc.js files for better control
+  - Used visibility:hidden technique for smoother page rendering
+  - Improved image preloading for header and background images
+  - Enhanced script.js to align with the new FOUC prevention approach
+  - Fixed inconsistent script references across all pages
+  - Extended anti-FOUC solution to all pages in resources subdirectories
+  - Updated all prayer guide pages and recommended apps page with the improved loading strategy
+  - Fixed path issues in the resources subdirectory pages
+  - Removed outdated path-fixer.js references from all pages
 - **Prepared Mailchimp integration for signup form (March 19, 2025)**:
   - Updated signup form with proper Mailchimp structure and attributes
   - Added instructions for connecting to a specific Mailchimp account

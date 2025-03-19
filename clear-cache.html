@@ -7,8 +7,21 @@
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clear Browser Cache - Father Trucker</title>
-    <link rel="stylesheet" href="css/styles.css?v=20250318">
+    
+    <!-- Anti-FOUC strategy - must be loaded first -->
+    <link rel="stylesheet" href="css/anti-fouc.css">
+    <script src="js/anti-fouc.js"></script>
+    
+    <!-- Preload key resources -->
+    <link rel="preload" href="css/styles.css?v=20250319" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="images/truck.jpg" as="image">
+    
+    <!-- Main stylesheets -->
+    <link rel="stylesheet" href="css/styles.css?v=20250319">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         .cache-content {
@@ -192,7 +205,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=20250318"></script>
+    <script src="js/script.js?v=20250319"></script>
     <script>
         // Generate a unique timestamp to force browser to reload
         document.addEventListener('DOMContentLoaded', function() {

@@ -1,0 +1,46 @@
+/* Anti-FOUC CSS */
+html {
+  visibility: hidden;
+  opacity: 0;
+}
+
+html.loaded {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+/* Default styling for critical elements to prevent layout shifts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+header {
+  min-height: 80px;
+  background-color: #3a5a78;
+}
+
+/* Hero placeholder to prevent layout jumps */
+.hero {
+  min-height: 300px;
+  background-color: #3a5a78;
+}
+
+/* Force-hide transition elements until fully loaded */
+.feature-card, 
+.hero .btn-primary, 
+.social-icons a,
+nav .nav-menu a {
+  transition: none !important;
+}
+
+html.loaded .feature-card,
+html.loaded .hero .btn-primary,
+html.loaded .social-icons a,
+html.loaded nav .nav-menu a {
+  transition: all 0.3s ease !important;
+}

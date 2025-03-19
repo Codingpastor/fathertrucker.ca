@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Father Trucker - Power Serve Ministries</title>
     <meta name="description" content="Join the Father Trucker community to receive resources, encouragement, and support designed specifically for Christian truckers.">
@@ -10,9 +13,21 @@
     <meta property="og:description" content="Join our community and stay connected on the road with resources specifically for truckers.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="">
-    <!-- Link fixing scripts removed -->
+    
+    <!-- Anti-FOUC strategy - must be loaded first -->
+    <link rel="stylesheet" href="css/anti-fouc.css">
+    <script src="js/anti-fouc.js"></script>
+    
+    <!-- Preload key resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="images/truck.jpg" as="image">
+    
+    <!-- Main stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         .error-message {
@@ -239,8 +254,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=20250318"></script>
-    <!-- Path fixing script removed -->
+    <!-- Replace with updated script -->
+    <script src="js/script.js?v=20250319"></script>
     
     <!-- Mailchimp form handling script -->
     <script type="text/javascript">

@@ -2,6 +2,7 @@
 
 ## Priority 1: Essential for Launch
 
+- [x] Fix Flash of Unstyled Content issues across the site
 - [ ] Set up GitHub repository named `fathertrucker.ca`
 - [ ] Push all files from local directory to GitHub
 - [ ] Enable GitHub Pages in repository settings
