@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="visibility: hidden;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -8,7 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayer Guides for Truckers - Father Trucker</title>
     
-    <!-- Anti-FOUC strategy - must be loaded first -->
+    <!-- Inline critical anti-FOUC styles - applied immediately -->
+    <style>
+        html, body { visibility: hidden; }
+        html.loaded, html.loaded body { visibility: visible; }
+    </style>
+    
+    <!-- Immediate execution anti-FOUC script -->
+    <script>
+        // Run before anything else
+        (function() {
+            // Apply hidden state immediately
+            document.documentElement.style.visibility = 'hidden';
+            
+            // Set up the load handler
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.documentElement.classList.add('loaded');
+                    document.documentElement.style.visibility = '';
+                }, 200); // Slightly longer delay to ensure complete rendering
+            });
+            
+            // Failsafe - show content after 2 seconds no matter what
+            setTimeout(function() {
+                document.documentElement.classList.add('loaded');
+                document.documentElement.style.visibility = '';
+            }, 2000);
+        })();
+    </script>
+    
+    <!-- Anti-FOUC strategy - enhances the inline approach -->
     <link rel="stylesheet" href="../../css/anti-fouc.css">
     <script src="../../js/anti-fouc.js"></script>
     

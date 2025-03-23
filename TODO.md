@@ -44,6 +44,13 @@
 - [ ] Review and update content as ministry evolves
 
 ## Completed Tasks
+- [x] **Extended aggressive anti-FOUC strategy to all resource pages (March 23, 2025)**:
+  - Applied inline critical styles to all prayer guides
+  - Applied inline critical styles to recommended apps page
+  - Improved resource preloading in each page with fetchpriority attributes
+  - Removed outdated path-fixer.js references from all resource pages
+  - Updated script references to use versioned URLs (script.js?v=20250323)
+
 - [x] **Completely eliminated Flash of Unstyled Content (FOUC) with aggressive inline strategy (March 23, 2025)**:
   - Implemented critical inline styles directly in the HTML head
   - Added immediate-execution JavaScript that runs before any external resources

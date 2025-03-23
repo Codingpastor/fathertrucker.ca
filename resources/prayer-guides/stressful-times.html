@@ -1,9 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="visibility: hidden;">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayers for Stressful Times: A Trucker's Guide - Father Trucker</title>
+    
+    <!-- Inline critical anti-FOUC styles - applied immediately -->
+    <style>
+        html, body { visibility: hidden; }
+        html.loaded, html.loaded body { visibility: visible; }
+    </style>
+    
+    <!-- Immediate execution anti-FOUC script -->
+    <script>
+        // Run before anything else
+        (function() {
+            // Apply hidden state immediately
+            document.documentElement.style.visibility = 'hidden';
+            
+            // Set up the load handler
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.documentElement.classList.add('loaded');
+                    document.documentElement.style.visibility = '';
+                }, 200); // Slightly longer delay to ensure complete rendering
+            });
+            
+            // Failsafe - show content after 2 seconds no matter what
+            setTimeout(function() {
+                document.documentElement.classList.add('loaded');
+                document.documentElement.style.visibility = '';
+            }, 2000);
+        })();
+    </script>
+    
+    <!-- Anti-FOUC strategy - enhances the inline approach -->
+    <link rel="stylesheet" href="../../css/anti-fouc.css">
+    <script src="../../js/anti-fouc.js"></script>
+    
+    <!-- Preload key resources -->
+    <link rel="preload" href="../../css/styles.css" as="style" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="../../images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="../../images/truck.jpg" as="image">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
@@ -213,7 +255,7 @@
         </div>
     </footer>
 
-    <script src="../../js/script.js"></script>
-    <script src="../../js/path-fixer.js"></script>
+    <script src="../../js/script.js?v=20250323"></script>
+    <!-- Path fixer script removed -->
 </body>
 </html>
