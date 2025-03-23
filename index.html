@@ -18,11 +18,21 @@
     <link rel="stylesheet" href="css/anti-fouc.css">
     <script src="js/anti-fouc.js"></script>
     
-    <!-- Preload key resources -->
-    <link rel="preload" href="css/styles.css" as="style">
+    <!-- Enhanced preloading strategy -->
+    <!-- Critical CSS -->
+    <link rel="preload" href="css/styles.css" as="style" fetchpriority="high">
+    <link rel="preload" href="css/anti-fouc.css" as="style" fetchpriority="high">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-    <link rel="preload" href="images/logo.png" as="image">
-    <link rel="preload" href="images/highway.jpg" as="image">
+    
+    <!-- Critical images -->
+    <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="images/highway.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="images/truck.jpg" as="image">
+    <link rel="preload" href="images/resources-header.jpg" as="image">
+    
+    <!-- Critical JavaScript -->
+    <link rel="preload" href="js/anti-fouc.js" as="script" fetchpriority="high">
+    <link rel="preload" href="js/script.js" as="script">
     
     <!-- Main stylesheets -->
     <link rel="stylesheet" href="css/styles.css">

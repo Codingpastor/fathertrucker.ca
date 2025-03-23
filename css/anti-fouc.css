@@ -1,13 +1,16 @@
-/* Anti-FOUC CSS */
+/* Enhanced Anti-FOUC CSS */
 html {
   visibility: hidden;
   opacity: 0;
+  /* Better initial control */
+  overflow: hidden;
 }
 
 html.loaded {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.1s ease;
+  overflow: auto;
+  transition: opacity 0.2s ease;
 }
 
 /* Default styling for critical elements to prevent layout shifts */
@@ -34,13 +37,29 @@ header {
 .feature-card, 
 .hero .btn-primary, 
 .social-icons a,
-nav .nav-menu a {
+nav .nav-menu a,
+.hero,
+.page-header,
+.resources-header,
+.mission,
+.features,
+.cta,
+.chaplain-support {
   transition: none !important;
+  opacity: 0.01; /* Nearly invisible but avoids reflow */
 }
 
 html.loaded .feature-card,
 html.loaded .hero .btn-primary,
 html.loaded .social-icons a,
-html.loaded nav .nav-menu a {
+html.loaded nav .nav-menu a,
+html.loaded .hero,
+html.loaded .page-header,
+html.loaded .resources-header,
+html.loaded .mission,
+html.loaded .features,
+html.loaded .cta,
+html.loaded .chaplain-support {
   transition: all 0.3s ease !important;
+  opacity: 1;
 }
