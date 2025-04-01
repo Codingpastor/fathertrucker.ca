@@ -38,17 +38,18 @@
     </script>
     
     <!-- Anti-FOUC strategy - enhances the inline approach -->
-    <link rel="stylesheet" href="../../css/anti-fouc.css">
-    <script src="../../js/anti-fouc.js"></script>
+    <link rel="stylesheet" href="/css/anti-fouc.css"> <!-- Root-relative path -->
+    <script src="/js/anti-fouc.js"></script> <!-- Root-relative path -->
     
     <!-- Preload key resources -->
-    <link rel="preload" href="../../css/styles.css" as="style" fetchpriority="high">
+    <link rel="preload" href="/css/styles.css" as="style" fetchpriority="high"> <!-- Root-relative path -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-    <link rel="preload" href="../../images/logo.png" as="image" fetchpriority="high">
-    <link rel="preload" href="../../images/truck.jpg" as="image">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="preload" href="/images/logo.png" as="image" fetchpriority="high"> <!-- Root-relative path -->
+    <link rel="preload" href="/images/truck.jpg" as="image"> <!-- Root-relative path -->
+    <!-- Main stylesheets (moved from preload section) -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Root-relative path -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"> <!-- Root-relative path -->
     <style>
         .prayer-guide-container {
             max-width: 800px;
@@ -112,8 +113,8 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="../../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
-                <img src="../../images/logo.png" alt="Father Trucker Logo" height="60">
+                <a href="/index.html" style="text-decoration: none; color: white; display: flex; align-items: center; gap: 15px;"> <!-- Root-relative path & color fix -->
+                <img src="/images/logo.png" alt="Father Trucker Logo" height="60"> <!-- Root-relative path -->
                 <div>
                     <h1>Father Trucker</h1>
                     <p>Power Serve Ministries</p>
@@ -127,11 +128,12 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../../about.html">About</a></li>
-                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="/index.html">Home</a></li> <!-- Root-relative path -->
+                    <li><a href="/about.html">About</a></li> <!-- Root-relative path -->
+                    <li><a href="/resources.html" class="active">Resources</a></li> <!-- Root-relative path -->
+                    <li><a href="/support.html">Support Us</a></li> <!-- Added Support link -->
                     <li><a href="mailto:powerservechaplain@gmail.com" class="btn-chaplain">Talk to a Chaplain</a></li>
-                    <li><a href="../../signup.html" class="btn-primary">Sign Up</a></li>
+                    <li><a href="/signup.html" class="btn-primary">Sign Up</a></li> <!-- Root-relative path -->
                 </ul>
             </nav>
         </div>
@@ -234,10 +236,12 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="../../about.html">About</a></li>
-                        <li><a href="../../resources.html">Resources</a></li>
-                        <li><a href="../../signup.html">Sign Up</a></li>
+                        <li><a href="/index.html">Home</a></li> <!-- Root-relative path -->
+                        <li><a href="/about.html">About</a></li> <!-- Root-relative path -->
+                        <li><a href="/resources.html">Resources</a></li> <!-- Root-relative path -->
+                        <li><a href="/support.html">Support Us</a></li> <!-- Added Support link -->
+                        <li><a href="/signup.html">Sign Up</a></li> <!-- Root-relative path -->
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li> <!-- Added Privacy Policy link -->
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -255,7 +259,7 @@
         </div>
     </footer>
 
-    <script src="../../js/script.js?v=20250323"></script>
+    <script src="/js/script.js?v=20250323"></script> <!-- Root-relative path -->
     <!-- Path fixer script removed -->
 </body>
 </html>
