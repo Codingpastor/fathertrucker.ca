@@ -13,20 +13,18 @@
     <meta property="og:description" content="Urgently inviting those who drive the highways and byways to follow Christ.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="">
-    
-    <!-- Inline critical anti-FOUC styles - applied immediately -->
+
     <style>
         html, body { visibility: hidden; }
         html.loaded, html.loaded body { visibility: visible; }
     </style>
-    
-    <!-- Immediate execution anti-FOUC script -->
+
     <script>
         // Run before anything else
         (function() {
             // Apply hidden state immediately
             document.documentElement.style.visibility = 'hidden';
-            
+
             // Set up the load handler
             window.addEventListener('load', function() {
                 setTimeout(function() {
@@ -34,7 +32,7 @@
                     document.documentElement.style.visibility = '';
                 }, 200); // Slightly longer delay to ensure complete rendering
             });
-            
+
             // Failsafe - show content after 2 seconds no matter what
             setTimeout(function() {
                 document.documentElement.classList.add('loaded');
@@ -42,33 +40,67 @@
             }, 2000);
         })();
     </script>
-    
-    <!-- Anti-FOUC strategy - enhances the inline approach -->
+
     <link rel="stylesheet" href="css/anti-fouc.css">
     <script src="js/anti-fouc.js"></script>
-    
-    <!-- Enhanced preloading strategy -->
-    <!-- Critical CSS -->
+
     <link rel="preload" href="css/styles.css" as="style" fetchpriority="high">
     <link rel="preload" href="css/anti-fouc.css" as="style" fetchpriority="high">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-    
-    <!-- Critical images -->
+
     <link rel="preload" href="images/logo.png" as="image" fetchpriority="high">
     <link rel="preload" href="images/highway.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="images/truck.jpg" as="image">
     <link rel="preload" href="images/resources-header.jpg" as="image">
-    
-    <!-- Critical JavaScript -->
+
     <link rel="preload" href="js/anti-fouc.js" as="script" fetchpriority="high">
     <link rel="preload" href="js/script.js" as="script">
-    
-    <!-- Main stylesheets -->
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
+
+    <style>
+        /* --- Responsive YouTube Video --- */
+        .video-feature {
+            padding: 40px 0; /* Add some spacing above and below the section */
+            background-color: #f8f8f8; /* Optional: Add a light background */
+            text-align: center; /* Center the heading */
+        }
+
+        .video-feature h2 {
+            margin-bottom: 30px; /* Space below the heading */
+            color: #333; /* Heading color */
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000; /* Black background while loading */
+            margin: 0 auto; /* Center the wrapper if needed within its container */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* Remove default border */
+        }
+
+        /* Optional: Add max-width for larger screens if desired */
+        @media (min-width: 768px) {
+            .video-wrapper {
+               max-width: 720px; /* Example max-width */
+            }
+        }
+    </style>
+    </head>
 <body>
     <header>
         <div class="container">
@@ -88,13 +120,8 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="/index.html" class="active">Home</a></li> <!-- Root-relative path -->
-                    <li><a href="/about.html">About</a></li> <!-- Root-relative path -->
-                    <li><a href="/resources.html">Resources</a></li> <!-- Root-relative path -->
-                    <li><a href="/support.html">Support Us</a></li> <!-- Added Support link -->
-                    <li><a href="mailto:powerservechaplain@gmail.com" class="btn-chaplain">Talk to a Chaplain</a></li>
-                    <li><a href="/signup.html" class="btn-primary">Sign Up</a></li> <!-- Root-relative path -->
-                </ul>
+                    <li><a href="/index.html" class="active">Home</a></li> <li><a href="/about.html">About</a></li> <li><a href="/resources.html">Resources</a></li> <li><a href="/support.html">Support Us</a></li> <li><a href="mailto:powerservechaplain@gmail.com" class="btn-chaplain">Talk to a Chaplain</a></li>
+                    <li><a href="/signup.html" class="btn-primary">Sign Up</a></li> </ul>
             </nav>
         </div>
     </header>
@@ -146,6 +173,20 @@
         </div>
     </section>
 
+    <section class="video-feature">
+        <div class="container">
+            <h2>Featured Video</h2> <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/vz_jiVwuN2s?si=pXZUO91ryGEb-eU8&controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
     <section class="cta">
         <div class="container">
             <h2>Join Our Community</h2>
@@ -164,13 +205,7 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/index.html">Home</a></li> <!-- Root-relative path -->
-                        <li><a href="/about.html">About</a></li> <!-- Root-relative path -->
-                        <li><a href="/resources.html">Resources</a></li> <!-- Root-relative path -->
-                        <li><a href="/support.html">Support Us</a></li> <!-- Added Support link -->
-                        <li><a href="/signup.html">Sign Up</a></li> <!-- Root-relative path -->
-                        <li><a href="/privacy-policy.html">Privacy Policy</a></li> <!-- Root-relative path -->
-                    </ul>
+                        <li><a href="/index.html">Home</a></li> <li><a href="/about.html">About</a></li> <li><a href="/resources.html">Resources</a></li> <li><a href="/support.html">Support Us</a></li> <li><a href="/signup.html">Sign Up</a></li> <li><a href="/privacy-policy.html">Privacy Policy</a></li> </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Connect With Us</h4>
@@ -182,12 +217,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Power Serve Ministries. All Rights Reserved.</p>
+                <p>© 2025 Power Serve Ministries. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Replace the old script with our new approach -->
     <script src="js/script.js?v=20250319"></script>
 </body>
 </html>
