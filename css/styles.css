@@ -112,7 +112,7 @@ header .container {
 .logo h1 {
     color: var(--white-color);
     font-size: 3.0rem;
-    margin-bottom: 5px;
+    margin-bottom: 0px; /* Reduced margin */
 }
 
 .logo p {
@@ -385,7 +385,7 @@ footer {
 
 .footer-logo h3 {
     color: var(--white-color);
-    margin-bottom: 10px;
+    margin-bottom: 2px; /* Reduced margin */
 }
 
 .footer-logo p {
