@@ -1,6 +1,6 @@
-# Father Trucker - Power Serve Ministries Website
+# Father Trucker - Transport for Christ Website
 
-This repository contains the website for Father Trucker (Power Serve Ministries), a Christian ministry focused on supporting truckers in their faith journey.
+This repository contains the website for Father Trucker (Transport for Christ), a Christian ministry focused on supporting truckers in their faith journey.
 
 ## Website Structure
 
